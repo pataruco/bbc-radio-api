@@ -1,0 +1,19 @@
+{
+  "name": "bbc-radio-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pataruco/bbc-radio-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pataruco/bbc-radio-api/issues"
+  },
+  "homepage": "https://github.com/pataruco/bbc-radio-api#readme"
+}
