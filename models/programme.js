@@ -4,7 +4,8 @@ class Programme {
     constructor(data) {
         let programme = {
             title: this.getTitle(data),
-            synopsis: this.getSynopsis(data)
+            synopsis: this.getSynopsis(data),
+            image: this.getImage(data)
         }
         return programme;
     }
@@ -15,6 +16,15 @@ class Programme {
 
     getSynopsis(data) {
         return data.programme.short_synopsis;
+    }
+
+    getImage(data) {
+        let image = data.programme.image;
+        if (image) {
+            let pid = data.programme.image.pid;
+            return `https://ichef.bbci.co.uk/images/ic/480x270/${pid}.jpg`;
+        }
+        return 'http://via.placeholder.com/480x270';
     }
 }
 
