@@ -41,4 +41,13 @@ describe('Model Programme', () => {
             done();
         });
     });
+
+    describe('values', () => {
+
+        it('should return title', (done) => {
+            assert.equal(programme.title, data.programme.title);
+            done();
+        });
+
+    });
 });
