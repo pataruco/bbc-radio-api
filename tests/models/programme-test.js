@@ -49,5 +49,10 @@ describe('Model Programme', () => {
             done();
         });
 
+        it('should return synopsis', (done) => {
+            assert.equal(programme.synopsis, data.programme.short_synopsis);
+            done();
+        });
+
     });
 });
