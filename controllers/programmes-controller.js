@@ -1,21 +1,29 @@
 const express = require('express');
 const router = express.Router();
+const Search = require('./helper/search');
+const Suggestion = require('./helper/suggestion');
+
 
 // Root
 router.get('/', (request, response) => {
-    response.sendStatus(200);
+    response.render('search');
 });
 
 router.post('/', (request, response) => {
-    response.redirect(`/search=undefined`);
+    let searchString = request.body.search;
+    response.redirect(`/search=${searchString}`);
 });
 
 router.get('/search=:query', (request, response) => {
-    response.sendStatus(200);
+    let query = request.params.query
+    let searchResults = new Search(query);
+    response.render('search-results', { searchResults } );
 });
 
 router.get('/suggest=:query', (request, response) => {
-    response.send(  [ ] );
+    let query = request.params.query
+    let suggestResults = new Suggestion(query);
+    response.send(suggestResults);
 });
 
 
