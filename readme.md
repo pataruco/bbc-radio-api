@@ -1,7 +1,11 @@
-# BBC radio search challenge
+# BBC Radio iPlayer Programme finder challenge
 
 ## What it is?
 Is a JavaScript Node/Express app to implement "Programme finder" iPlayer Radio feature
+
+## Production URL
+
+[https://bbc-radio-api.herokuapp.com/](https://bbc-radio-api.herokuapp.com/)
 
 ## Requirements
 - Node => 8.1.4
