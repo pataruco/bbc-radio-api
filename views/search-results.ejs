@@ -1,15 +1,15 @@
 <main class="constrain">
     <h1> Search results </h1>
-    <section class="search">
-        <ul class="search__suggestions">
+    <section >
+        <ul >
             <%  if ( searchResults.length ) {  %>
                     <% searchResults.forEach( ( result ) =>{ %>
-                        <li class="search__suggestion">
-                            <a href="#" class="row">
-                                <div class="search__suggestion-media">
+                        <li >
+                            <a href="#" >
+                                <div>
                                     <img src="<%= result.image %>" alt="<%= result.title %>">
                                 </div>
-                                <div class="search__suggestion-content">
+                                <div>
                                     <h2> <%= result.title %> </h2>
                                     <p> <%= result.synopsis %> </p>
                                 </div>
