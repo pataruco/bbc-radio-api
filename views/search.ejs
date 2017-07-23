@@ -1,3 +1,27 @@
-
-
-<input type="text" name="" value="">
+<main class="constrain">
+    <h1> Search </h1>
+    <section id="search" class="search">
+        <form class="row" action="/" method="post">
+            <label for="search">Search</label>
+            <input type="search" name="search" v-model="searchString" v-on:keyup="getSuggestions" placeholder="Enter your search terms">
+            <button type="submit"></button>
+        </form>
+        <ul v-if="showResults" class="search__suggestions">
+            <li v-for="suggestion in programmes" class="search__suggestion">
+                <a href="#" class="row ">
+                    <div class="search__suggestion-media">
+                        <img v-bind:src="suggestion.image" v-bind:alt="suggestion.title">
+                    </div>
+                    <div class="search__suggestion-content">
+                        <h2>{{ suggestion.title }}</h2>
+                        <p>{{ suggestion.synopsis }}</p>
+                    </div>
+                </a>
+            </li>
+            <li v-if="noSuggestions" class="search__suggestion--no-results">
+                <p>There are not results</p>
+            </li>
+        </ul>
+    </section>
+</main>
+<script src="./js/app.js" charset="utf-8"></script>
