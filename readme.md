@@ -1,7 +1,7 @@
 # BBC Radio iPlayer Programme finder challenge
 
-## What it is?
-Is a JavaScript Node/Express app to implement "Programme finder" iPlayer Radio feature
+## What is it?
+It is a JavaScript Node/Express app to implement "Programme finder" iPlayer Radio feature
 
 ## Production URL
 
@@ -19,7 +19,7 @@ Is a JavaScript Node/Express app to implement "Programme finder" iPlayer Radio f
 - [Laravel-mix 1.3.0](https://github.com/JeffreyWay/laravel-mix)
 
 ## Installation
- _I assumed you have **Node > 8.1.4** installed in your machine_
+ _I am assuming you have **Node > 8.1.4** installed in your machine_
 
  **On your terminal console**
  - Clone this repo
