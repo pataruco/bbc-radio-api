@@ -3,7 +3,7 @@ const router = express.Router();
 
 // Root
 router.get('/', (request, response) => {
-    response.sendStatus(200);
+    response.render('search');
 });
 
 router.post('/', (request, response) => {
