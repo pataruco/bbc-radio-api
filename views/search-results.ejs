@@ -1,5 +1,26 @@
-<ul>
-    <li>
-        the
-    </li>
-</ul>
+<main class="constrain">
+    <h1> Search results </h1>
+    <section class="search">
+        <ul class="search__suggestions">
+            <%  if ( searchResults.length ) {  %>
+                    <% searchResults.forEach( ( result ) =>{ %>
+                        <li class="search__suggestion">
+                            <a href="#" class="row">
+                                <div class="search__suggestion-media">
+                                    <img src="<%= result.image %>" alt="<%= result.title %>">
+                                </div>
+                                <div class="search__suggestion-content">
+                                    <h2> <%= result.title %> </h2>
+                                    <p> <%= result.synopsis %> </p>
+                                </div>
+                            </a>
+                        </li>
+                    <% }) %>
+            <%  } else { %>
+                <li>
+                    <p>There are not results</p>
+                </li>
+            <%  } %>
+        </ul>
+    </section>
+</main>
