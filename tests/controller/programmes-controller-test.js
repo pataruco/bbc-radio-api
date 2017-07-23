@@ -12,13 +12,22 @@ describe("Controller Programme", () => {
                 .expect(200, done);
         });
     });
-    
+
     describe("POST /", () => {
         it("should return redirect to /search=:query", (done) => {
             api
                 .post("/")
                 .expect(302)
                 .expect('Location', '/search=undefined', done);
+        });
+    });
+
+    describe("GET /search", () => {
+        it("should return 200 OK", (done) => {
+            api
+                .get('/search=the')
+                .expect('Content-Type', /text/)
+                .expect(200, done)
         });
     });
 });
