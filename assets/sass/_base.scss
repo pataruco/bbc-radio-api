@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+:root, html, body {
+    font-family: $base-font;
+    font-size: $base-font-size;
+}
+
+body {
+    background-color: $c-black;
+    color: $c-white;
+}
+
+.constrain {
+    max-width: 1000px;
+    padding: 0 $base-unit * 2;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}

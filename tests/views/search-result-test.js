@@ -13,7 +13,7 @@ describe('View search result ', () => {
                 .end(function(error, response) {
                     if (error) return done(err);
                     should.not.exist(error);
-                    response.text.should.includes(/<li>/);
+                    response.text.should.match(/<li>/);
                     response.text.should.match(/the/);
                     done();
                 });
