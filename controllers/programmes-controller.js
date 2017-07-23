@@ -11,7 +11,7 @@ router.post('/', (request, response) => {
 });
 
 router.get('/search=:query', (request, response) => {
-    response.sendStatus(200);
+    response.render('search-results')
 });
 
 router.get('/suggest=:query', (request, response) => {
