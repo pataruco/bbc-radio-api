@@ -1,0 +1,82 @@
+header {
+    ul {
+        padding: 0;
+        list-style: none;
+        margin-bottom: 0;
+    }
+    li {
+        margin-bottom: $base-unit;
+    }
+}
+
+.search {
+    // position: relative;
+    form {
+        display: flex;
+    }
+    label {
+        display: none;
+    }
+    input {
+        width: 90%;
+        height: 4em;
+        padding: $base-unit;
+        font-size: 1rem;
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
+    button {
+        width: 10%;
+        background-image: url('http://rmp.files.bbci.co.uk/radio-nav-service/395/img/search_white.png');
+        background-color: $c-pink;
+        border: none;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+        transition: 1s ease all;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: black;
+        }
+    }
+
+    &__suggestions {
+        padding: 0;
+        list-style: none;
+        margin: 0;
+    }
+
+    &__suggestion {
+        padding: $base-unit 0;
+        border-bottom: 1px solid transparentize($c-white, .25);
+        a {
+            color: white;
+            text-decoration: none;
+            transition: .5 ease all;
+        }
+        &:hover {
+            background-color: lighten($c-black, 10%);
+        }
+
+        &--no-results p {
+            font-size: 1.5em;
+        }
+    }
+
+    &__suggestion-media {
+        width: 25%;
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__suggestion-content {
+        width: 100%;
+        padding: 0 4em;
+    }
+}
