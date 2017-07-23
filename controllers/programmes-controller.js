@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Search = require('./helper/search');
+const Suggestion = require('./helper/suggestion');
+
 
 // Root
 router.get('/', (request, response) => {
@@ -19,7 +21,9 @@ router.get('/search=:query', (request, response) => {
 });
 
 router.get('/suggest=:query', (request, response) => {
-    response.send(  [ ] );
+    let query = request.params.query
+    let suggestResults = new Suggestion(query);
+    response.send(suggestResults);
 });
 
 
