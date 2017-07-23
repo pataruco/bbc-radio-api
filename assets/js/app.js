@@ -29,7 +29,6 @@ window.onload = function( ) {
                     return this.noSuggestions = true;
                 }
                 return this.noSuggestions = false;
-
             }
         }
     });

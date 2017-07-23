@@ -4,9 +4,9 @@ const Search = require('./search');
 // extends search class
 class Suggestion extends Search {
 
-    constructor( query ) {
+    constructor(query) {
         // inheritance from Search
-        super( query );
+        super(query);
 
         let programmes = this;
 

@@ -3,10 +3,14 @@ class Programme {
     // get raw data
     constructor(data) {
         let programme = {
+            //get title from raw data
             title: this.getTitle(data),
+            //get Synopsis from raw data
             synopsis: this.getSynopsis(data),
+            //get image from raw data
             image: this.getImage(data)
         }
+        // return programme object
         return programme;
     }
 
