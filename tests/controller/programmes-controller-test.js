@@ -26,7 +26,7 @@ describe("Controller Programme", () => {
         it("should return 200 OK", (done) => {
             api
                 .get('/search=the')
-                .expect('Content-Type', /text/)
+                .expect('Content-Type', /html/)
                 .expect(200, done)
         });
     });
