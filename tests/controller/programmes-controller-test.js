@@ -30,4 +30,18 @@ describe("Controller Programme", () => {
                 .expect(200, done)
         });
     });
+
+    describe('GET /suggest=the', () => {
+        it('should return an array ', (done) => {
+            api
+                .get('/suggest=the')
+                .expect('Content-Type', /json/)
+                .expect(200)
+                .end(function(error, response) {
+                    if (error) return done(err);
+                    assert.isArray(response.body)
+                    done();
+                });
+        })
+    })
 });

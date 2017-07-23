@@ -14,5 +14,9 @@ router.get('/search=:query', (request, response) => {
     response.sendStatus(200);
 });
 
+router.get('/suggest=:query', (request, response) => {
+    response.send(  [ ] );
+});
+
 
 module.exports = router;
